@@ -1,5 +1,5 @@
 # Usa una imagen base de Node.js para el backend
-FROM node:latest AS backend
+FROM node:lts-alpine AS backend
 
 # Establece el directorio de trabajo para el backend
 WORKDIR /app/backend
@@ -16,18 +16,21 @@ COPY backend .
 # Construye el backend
 RUN npm run build
 
+# Crea un comando HEALTHCHECK para verificar la salud del servicio
+HEALTHCHECK CMD npm run healthcheck
+
 # Usa una imagen base de MariaDB
 FROM mariadb:latest AS db
 
 # Establece las variables de entorno para la creación de la base de datos
-ENV MYSQL_ROOT_PASSWORD=
+ENV MYSQL_ROOT_PASSWORD=example
 ENV MYSQL_DATABASE=peaku
 
 # Copia los scripts SQL para la creación de la base de datos y carga de datos
 COPY db-scripts/ /docker-entrypoint-initdb.d/
 
 # Usa otra imagen base de Node.js para el frontend
-FROM node:latest AS frontend
+FROM node:lts-alpine AS frontend
 
 # Establece el directorio de trabajo para el frontend
 WORKDIR /app/frontend
@@ -38,17 +41,14 @@ COPY frontend/package*.json ./
 # Instala las dependencias del frontend
 RUN npm install
 
-# Copia el resto de los archivos del frontend
-COPY frontend .
-
-# Construye el frontend
-RUN npm run build
+# Copia el archivo de salida final del frontend
+COPY frontend/build/app.js .
 
 # Usa una imagen base de Nginx para el servidor web
 FROM nginx:latest
 
-# Copia los archivos del frontend construidos en el servidor Nginx
-COPY --from=frontend /app/frontend/build /usr/share/nginx/html
+# Copia el archivo JavaScript del frontend en el servidor Nginx
+COPY --from=frontend /app/frontend/app.js /usr/share/nginx/html
 
 # Copia la configuración personalizada de Nginx
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
