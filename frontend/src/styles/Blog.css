@@ -1,0 +1,20 @@
+.blog-cards {
+    margin-top: 4rem;
+}
+
+.circles {
+    margin-top: 2rem;
+}
+
+.box-title {
+}
+
+.img-blog {
+    height: 300px;
+    width: 300px;
+}
+
+.date-blog,
+.title-blog {
+    word-wrap: break-word;
+}

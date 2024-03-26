@@ -16,6 +16,16 @@ COPY backend .
 # Construye el backend
 RUN npm run build
 
+# Usa una imagen base de MariaDB
+FROM mariadb:latest AS db
+
+# Establece las variables de entorno para la creación de la base de datos
+ENV MYSQL_ROOT_PASSWORD=
+ENV MYSQL_DATABASE=peaku
+
+# Copia los scripts SQL para la creación de la base de datos y carga de datos
+COPY db-scripts/ /docker-entrypoint-initdb.d/
+
 # Usa otra imagen base de Node.js para el frontend
 FROM node:latest AS frontend
 

@@ -1,0 +1,80 @@
+/*
+:root {
+    --image-1: url('../images/img/Vector4857.png');
+    --image-2: url('../images/img/Vector4856.png');
+    --image-3: url('../images/img/Vector4857.png');
+}
+
+.card-1 {
+    background-image: var(--image-1) !important;
+    border-radius: 3%;
+}
+
+.card-2 {
+    background-image: var(--image-2) !important;
+    border-radius: 3%;
+}
+
+.card-3 {
+    background-image: var(--image-3) !important;
+    border-radius: 3%;
+}
+*/
+
+#things-u-need {
+    padding-bottom: 3rem;
+    background-color: #F7F8FC !important;
+}
+
+.needs-text {
+    margin-top: 4rem;
+    margin-left: 12.5rem;
+}
+
+/*
+.title-needs {
+}
+
+.needs-subtitle {
+}
+*/
+
+.orange-color {
+    color: #FA7435;
+}
+
+.icon-needs {
+    margin-top: 5rem;
+}
+
+.card-1 {
+    background-image: url('../images/img/Vector4857.png');
+    border-radius: 3%;
+}
+
+.card-2 {
+    background-image: url('../images/img/Vector4856.png');
+    border-radius: 3%;
+}
+
+.card-3 {
+    background-image: url('../images/img/Vector4857.png');
+    border-radius: 3%;
+}
+
+.card-icon-top {
+    height: 60px !important;
+    width: 55px !important;
+}
+
+.card-title-needs {
+    font-size: 1.5rem;
+}
+
+.card-text-needs {
+    font-size: 2.1vh;
+}
+
+.card-needs{
+    width: 340vh;
+}

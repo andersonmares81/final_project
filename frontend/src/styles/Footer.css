@@ -1,0 +1,51 @@
+footer {
+    background-color: #F7F8FC !important;
+}
+
+.social-media a {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.social-media svg {
+    color: black;
+}
+
+.social-media a:hover {
+    background-color: #fa7436;
+}
+
+.social-media a:hover i {
+    color: white;
+}
+
+footer h5 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.social-media .btn {
+    width: 45px; /* Ajusta el tamaño del círculo */
+    height: 45px; /* Ajusta el tamaño del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media .btn svg {
+    width: 100%; /* Ajusta el tamaño del ícono para que llene el círculo */
+    height: auto; /* Ajusta el tamaño del ícono para que llene el círculo */
+}
+
+footer ul li:hover {
+    text-shadow: 0.5px 0.5px 2px rgba(203, 90, 10, 0.6);
+}
+
+/*
+footer {
+    width: 100%;
+    height: 898px; 
+    background: linear-gradient(to bottom, transparent 210px, #F7F8FC 210px);
+}
+*/

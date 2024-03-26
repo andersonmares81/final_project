@@ -1,0 +1,36 @@
+#register{ 
+    height: 100%;
+    padding-top: 5vh;
+}
+
+#register-section{
+    height: 95vh;
+}
+
+#register-section h1{
+    color: #FA7435;
+}
+
+.register-contain{
+    height: 100%;
+}
+
+.button-register-u {
+    background-color: #fa7436;
+    border: none;    
+}
+
+.button-register-u:hover{
+    background-color: #fff;
+    color: #FA7435;
+    border: 1px solid #FA7435;
+
+}
+
+.register-contain-form{
+    width: 50vh;
+}
+
+.input-label{
+    color: #FA7435;
+}

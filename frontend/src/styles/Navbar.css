@@ -1,0 +1,94 @@
+#navbar {
+    /*padding-top: 0.5rem;*/
+    /* Agrega padding arriba */
+    position: fixed;
+    /* Cambiado de position: sticky a position: fixed */
+    z-index: 1000;
+    width: 100%;
+}
+
+#navbar ul {
+    margin-top: 1rem;
+}
+
+#navbar ul li:hover {
+    text-shadow: 0.5px 0.5px 2px rgba(203, 90, 10, 0.6);
+}
+
+nav {
+    height: 4.5rem;
+    background-color: #FDFCFA;
+}
+
+.logo-nav {
+    margin-right: 30vh;
+}
+
+.signing {
+    margin-left: 10vh;
+}
+
+#btn-signup {
+    background-color: #FA7435;
+    color: white;
+    width: 150px;
+}
+
+#btn-login {
+    color: #FA7435;
+    width: 150px;
+}
+
+#btn-login:hover {
+    background-color: #fa7436;
+    color: white;
+}
+
+#btn-signup:hover {
+    background-color: white;
+    color: #fa7436;
+    border: 1px solid #fa7436;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+.button-login-u {
+    background-color: #fa7436;
+    border: none;    
+}
+
+.button-login-u:hover{
+    background-color: #fff;
+    color: #FA7435;
+    border: 1px solid #FA7435;
+
+}
+
+.button-register-u{
+    background-color: #fa7436;
+    border: none;    
+}
+
+.button-register-u:hover{
+    background-color: #fff;
+    color: #FA7435;
+    border: 1px solid #FA7435;
+
+}
+
+.button-close-u{
+    background-color: #fff;
+    color: #FA7435;
+    border: 1px solid #FA7435;
+    
+}
+
+.button-close-u:hover{
+    background-color: #fa7436;
+    border: none;
+}
+*/

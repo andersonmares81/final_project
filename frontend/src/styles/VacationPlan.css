@@ -1,0 +1,33 @@
+.vacation-cards {
+    padding-bottom: 6vh;
+}
+
+.vacation-title {
+    margin-left: 14rem;
+}
+
+/*
+.vacation-subtitle {
+    
+}
+
+.title-vacation {
+}
+*/
+.palm-icon {
+    margin-top: 1rem;
+}
+
+.cursor-icon {
+    color: #FA7435;
+}
+
+.image-left {
+    position: absolute;
+    left: 70%;
+}
+
+.vacation-img{
+    width: 369px;
+    height: 327px;
+}
