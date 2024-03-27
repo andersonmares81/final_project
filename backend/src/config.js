@@ -7,5 +7,5 @@ export default {
     database: process.env.PK_DATABASE || "",
     user: process.env.PK_USER || "",
     password: process.env.PK_PASSWORD || "",
-    port: process.env.PK_PORT || "3346"   
+    port: process.env.PK_PORT || "3306"   
 };
