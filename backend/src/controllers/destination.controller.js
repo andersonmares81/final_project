@@ -1,17 +1,35 @@
 import { getConnection } from "../database/database.js";
+import redis from "ioredis";
+
+const redisClient = new redis();
 
 const getDestinations = async (req, res) => {
-    try {
-        const connection = await getConnection();
-        const result = await connection.query("SELECT `id`, `images`, `city`, `country`, `qualification`, `rates`, `discounts`, `qualification`, `datepublish`  FROM destinations LIMIT 20;"); 
-        res.setHeader('Cache-Control', 'public, max-age=7200');
-        res.json(result[0]);
-    } catch (error) {
-        console.error("Error al obtener destinos:", error);
-        res.status(500).send("Error interno del servidor");
+  try {
+    const cachedData = await redisClient.get("destinations");
+    if (cachedData) {
+      const hasChanges = await checkForChanges(); 
+      if (!hasChanges) {
+        console.log("Sirviendo destinos de la caché");
+        return res.json(JSON.parse(cachedData));
+      }
     }
+
+    const connection = await getConnection();
+    const result = await connection.query("SELECT * FROM destinations;");
+    
+    await redisClient.set("destinations", JSON.stringify(result[0]));
+
+    res.json(result[0]);
+  } catch (error) {
+    console.error("Error al obtener destinos:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+};
+
+const checkForChanges = async () => {
+  return false; 
 };
 
 export const methods = {
-    getDestinations
+  getDestinations,
 };
