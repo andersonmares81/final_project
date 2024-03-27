@@ -11,7 +11,6 @@ class Navbar extends React.Component {
             data: []
         };
     }
-
     componentDidMount() {
         this.fetchData();
     }
@@ -26,7 +25,7 @@ class Navbar extends React.Component {
             });
     };
 
-    render(){
+    render() {
         return (
             <div id="navbar">
                 <nav className="navbar navbar-expand-lg">
@@ -38,10 +37,10 @@ class Navbar extends React.Component {
                         <div className="navbar-collapse collapse" id="myNavbar">
                             <ul className="d-flex flex-row list-unstyled align-items-center justify-content-center">
                                 <li className="logo-nav">
-                                    <img className="nav-img" src={require(`../images/icons/${data.image}`)} alt="Logo-icon" />
+                                    <img className="nav-img" src={require(`../images/icons/${props.image}`)} alt="Logo-icon" />
                                 </li>
                                 <li>
-                                    <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to="/">{data.link1}</Link>
+                                    <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to="/">{props.link1}</Link>
                                 </li>
                                 <li onMouseEnter={toggleSections} onMouseLeave={toggleSections}>
                                     <span className="mx-3 fs-5 nav-link font-weight-bold text-dark">Sections</span>
@@ -49,7 +48,7 @@ class Navbar extends React.Component {
                                         <div className="sections-dropdown">
                                             <ul>
                                                 <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold " href="#get-started">Get Started</a>
+                                                    <a className="mx-3 fs-5 nav-link font-weight-bold " href="#started">Get Started</a>
                                                 </li>
                                                 <li>
                                                     <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#needs">Things you need to do</a>
@@ -74,25 +73,27 @@ class Navbar extends React.Component {
                                     )}
                                 </li>
                                 <li>
-                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{data.link3}</a>
+                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link3}</a>
                                 </li>
                                 <li>
-                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{data.link4}</a>
+                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link4}</a>
                                 </li>
                                 <li>
                                     <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
-                                        <Link Link to="/extended-blog" style={{ textDecoration: 'none', color: 'inherit' }}>{data.link5}</Link>
+                                        <Link Link to="/extended-blog" style={{ textDecoration: 'none', color: 'inherit' }}>{props.link5}</Link>
                                     </a>
                                 </li>
                                 <li className="signing">
                                     <div className="btn-group" role="group">
                                         <div className="btn-group" role="group">
-                                            <button id="btn-login" className="btn btn-lg rounded-3 me-2">
-                                                <Link Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_1}</Link>
-                                            </button>
-                                            <button id="btn-signup" className="btn btn-lg rounded-3">
-                                                <Link Link to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_2}</Link>
-                                            </button>
+                                            <div className="btn-group" role="group">
+                                                <button id="btn-login" className="btn btn-lg rounded-3 me-2">
+                                                    <Link Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_1}</Link>
+                                                </button>
+                                                <button id="btn-signup" className="btn btn-lg rounded-3">
+                                                    <Link Link to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_2}</Link>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
