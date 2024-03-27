@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `blog`;
 
 CREATE TABLE `blog` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `title` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
     `date` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     PRIMARY KEY (`id`)

@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `footer`;
 
 CREATE TABLE `footer` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `slogan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `company_item_1` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `company_item_2` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,

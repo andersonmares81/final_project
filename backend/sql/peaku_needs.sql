@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `needs`;
 
 CREATE TABLE `needs` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `background` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `description` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',

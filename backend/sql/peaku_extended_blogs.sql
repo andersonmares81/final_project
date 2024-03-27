@@ -49,7 +49,7 @@ CREATE TABLE `extended_blog` (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `autor` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `datepublish` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
   `datecreate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)

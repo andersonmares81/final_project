@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `deals`;
 
 CREATE TABLE `deals` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `rate` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `country` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,

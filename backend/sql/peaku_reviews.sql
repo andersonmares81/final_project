@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `reviews`;
 
 CREATE TABLE `reviews` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `images` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `text` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
     `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `city` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
