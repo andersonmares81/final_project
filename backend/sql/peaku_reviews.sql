@@ -60,7 +60,6 @@ CREATE TABLE `reviews` (
 --
 -- Dumping data for table `reviews`
 --
-LOCK TABLES `reviews` WRITE;
 
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */
 
@@ -95,8 +94,6 @@ VALUES
 
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */
 ;
-
-UNLOCK TABLES;
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */
 ;

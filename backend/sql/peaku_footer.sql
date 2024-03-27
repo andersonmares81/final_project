@@ -67,7 +67,6 @@ CREATE TABLE `footer` (
 --
 -- Dumping data for table `footer`
 --
-LOCK TABLES `footer` WRITE;
 
 /*!40000 ALTER TABLE `footer` DISABLE KEYS */
 
@@ -93,8 +92,6 @@ VALUES
 
 /*!40000 ALTER TABLE `footer` ENABLE KEYS */
 ;
-
-UNLOCK TABLES;
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */
 ;
