@@ -30,7 +30,7 @@ export default function Register() {
     <div id="register">
       <section id='register-section' className='container-fluid'>
         <div className="container-fluid d-flex justify-content-center align-items-center register-contain">
-          <div className="align-items-center px-2 register-contain-form" id="floating-card">
+          <div className="align-items-center px-2 register-contain-form" id="floating-register-card">
             <Form className='my-5 mx-5'>
               <h1 className='d-flex justify-content-center mb-4'>Register</h1>
               <Form.Group className='mb-3' controlId="formName">
