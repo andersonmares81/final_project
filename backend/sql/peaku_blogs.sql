@@ -58,7 +58,6 @@ CREATE TABLE `blog` (
 --
 -- Dumping data for table `blog`
 --
-LOCK TABLES `blog` WRITE;
 
 /*!40000 ALTER TABLE `blog` DISABLE KEYS */
 
@@ -122,7 +121,7 @@ VALUES
     ),
     (
         10,
-        'blog10.png',
+        'blog10.jpg',
         'A Year Abroad: Tales<br/>of Adventure and Growth',
         'August 10, 2022'
     ),
@@ -141,8 +140,6 @@ VALUES
 
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */
 ;
-
-UNLOCK TABLES;
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */
 ;

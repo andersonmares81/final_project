@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../styles/Blog.css'
 const vers =  'V.0.1';
 console.log('| LN04 - ', vers, ' - Blogs.jsx |');
 
@@ -49,12 +50,12 @@ class Blogs extends React.Component {
                                                 <img src={`../images/blogs/${card.images}`} className="img-blog rounded img-fluid" alt="Blog picture" />
                                                 <div className="row">
                                                     <div className="col-md-12 ms-2 me-4 mt-2 fw-bold">
-                                                        <p className="card-text title-blog my-1" dangerouslySetInnerHTML={{ __html: card.name }}></p>
+                                                        <p className="card-text title-blog my-1" dangerouslySetInnerHTML={{ __html: card.title   }}></p>
                                                     </div>
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-md-12 mx-2 mb-2">
-                                                        <p className="card-text date-blog text-muted mb-1">{card.datepublish}</p>
+                                                        <p className="card-text date-blog text-muted mb-1">{card.date}</p>
                                                     </div>
                                                 </div>
                                             </div>
