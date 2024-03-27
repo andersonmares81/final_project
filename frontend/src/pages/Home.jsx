@@ -14,9 +14,10 @@ import SubscribeProps from '../Props/SubscribeProps.js';
 export default function Home() {
     return (       
         <div >       
-            <div id="get-started">
+            
+            <div id="started">
                 <GetStarted 
-                    props = {GetStartedProps}/>
+                        props = {GetStartedProps}/>
             </div>   
             <div id="needs">
                 <Needs 

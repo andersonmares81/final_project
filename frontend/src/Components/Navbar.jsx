@@ -32,7 +32,7 @@ export default function Navbar({ props }) {
                                     <div className="sections-dropdown">
                                         <ul>
                                             <li>
-                                                <a className="mx-3 fs-5 nav-link font-weight-bold " href="#get-started">Get Started</a>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold " href="#started">Get Started</a>
                                             </li>
                                             <li>
                                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#needs">Things you need to do</a>
