@@ -55,6 +55,40 @@ nav {
     justify-content: space-between;
 }
 
+.sections-dropdown {    
+    position: absolute;
+    top: 70%; 
+    left: auto;
+    background-color: white;
+    padding: 1px;    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+    border-radius: 5px;
+    
+}
+
+.sections-dropdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sections-dropdown li {
+    margin-bottom: 5px; 
+}
+
+.sections-dropdown ul li a {    
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.sections-dropdown ul li a:hover {    
+    text-shadow: 0.5px 0.5px 2px rgba(203, 90, 10, 0.6);
+}
+
+
+
+
+
 /*
 .button-login-u {
     background-color: #fa7436;

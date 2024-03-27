@@ -1,9 +1,9 @@
 import { getConnection } from "../database/database.js";
 
-const getBlogs = async( req, res ) => {
+const getNavbar = async( req, res ) => {
     try{
         const connection = await getConnection();
-        const result = await connection.query("SELECT * FROM blog;");
+        const result = await connection.query("SELECT * FROM navbar;");
         console.log(result[0]);
         res.json(result[0]);
     }catch (error) {
@@ -13,5 +13,5 @@ const getBlogs = async( req, res ) => {
 };
 
 export const methods = {
-    getBlogs
+    getNavbar
 };

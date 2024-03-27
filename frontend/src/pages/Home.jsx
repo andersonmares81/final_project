@@ -13,18 +13,33 @@ import SubscribeProps from '../Props/SubscribeProps.js';
 
 export default function Home() {
     return (       
-        <div >                  
-            <GetStarted 
-                props = {GetStartedProps}/>
-            <Needs 
-                cards = {NeedsProps}/>
-            <Deals />   
-            <Vacation />
-            <Reviews 
-                cards = {ReviewsProps}/> 
-            <Blog />
-            <Subscribe
-                props = {SubscribeProps}/>              
+        <div >       
+            
+            <div id="started">
+                <GetStarted 
+                        props = {GetStartedProps}/>
+            </div>   
+            <div id="needs">
+                <Needs 
+                    cards = {NeedsProps}/>
+            </div>  
+            <div id='deals'>
+                <Deals /> 
+            </div>
+            <div id='vacation'>
+                <Vacation />
+            </div>
+            <div id='reviews'>
+                <Reviews 
+                    cards = {ReviewsProps}/> 
+            </div>
+            <div id='blog'>
+                <Blog />
+            </div>
+            <div id='subscribe'>
+                <Subscribe
+                    props = {SubscribeProps}/>   
+            </div>              
         </div>       
     );
 }
