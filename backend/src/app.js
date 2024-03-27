@@ -29,7 +29,7 @@ app.use(cors({
 // Routes
 //app.use('/api/languages/', languageRoutes);
 //app.use('/api/destinations/', detinationRoutes);
-app.use('/api/blogs/', blogRoutes);
+app.use('/api/blogz/', blogRoutes);
 app.use('/api/vacations/', vacationRoutes);
 app.use('/api/deals/', dealsRoutes);
 app.use('/api/navbar/', navbarRoutes)
