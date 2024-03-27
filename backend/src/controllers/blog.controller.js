@@ -3,9 +3,9 @@ import redis from "ioredis";
 
 const redisClient = new redis();
 
-const getBlogs = async( req, res ) => {
-    try{
-        const cachedData = await redisClient.get("blogs");
+const getBlogs = async (req, res) => {
+    try {
+        const cachedData = await redisClient.get("blogz");
         if (cachedData) {
             const hasChanges = await checkForChanges();
             if (!hasChanges) {
@@ -16,19 +16,19 @@ const getBlogs = async( req, res ) => {
         const connection = await getConnection();
         const result = await connection.query("SELECT * FROM blog;");
 
-        await redisClient.set("blogs", JSON.stringify(result[0]));
-    
+        await redisClient.set("blogz", JSON.stringify(result[0]));
+
         res.json(result[0]);
-    }catch (error) {
+    } catch (error) {
         console.error("Error al obtener destinos:", error);
         res.status(500).send("Error interno del servidor");
     }
 };
 
 const checkForChanges = async () => {
-    return false; 
+    return false;
 };
-  
+
 export const methods = {
     getBlogs,
 };

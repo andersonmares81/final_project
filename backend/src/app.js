@@ -29,7 +29,7 @@ app.use(cors({
 // Routes
 //app.use('/api/languages/', languageRoutes);
 //app.use('/api/destinations/', detinationRoutes);
-app.use('/api/blogs/', blogRoutes);
+app.use('/api/blogz/', blogRoutes);
 app.use('/api/vacations/', vacationRoutes);
 app.use('/api/deals/', dealsRoutes);
 app.use('/api/navbar/', navbarRoutes)
@@ -37,7 +37,7 @@ app.use('/api/needs/', needsRoutes)
 app.use('/api/locations/', locationsRoutes)
 app.use('/api/footer/', footerRoutes)
 app.use('/api/reviews/', reviewsRoutes)
-app.use('/api/extendedblog/', extendedBlogRoutes)
+app.use('/api/extendedblogz/', extendedBlogRoutes)
 
 /*
 app.get('/api/destinations', (req, res) => {
