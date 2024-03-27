@@ -3,9 +3,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
+import useScrollTo from '../hooks/useScrollTo';
 
 
 export default function Navbar({ props }) { 
+    const [showSections, setShowSections] = useState(false);
+    const { handleScrollTo } = useScrollTo();
+
+    const toggleSections = () => {
+        setShowSections(!showSections);
+    }
+    const handleClick = (sectionId) => {
+        handleScrollTo(sectionId); 
+    };
+
     return (
         <div id="navbar">
             <nav class="navbar navbar-expand-lg">
@@ -22,14 +33,61 @@ export default function Navbar({ props }) {
                             <li>                                
                                 <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to = "/">{props.link1}</Link>
                             </li>
-                            <li>
-                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link2}</a>
+                            <li onMouseEnter={toggleSections} onMouseLeave={toggleSections}>
+                                <span className="mx-3 fs-5 nav-link font-weight-bold text-dark">Sections</span>
+                                {showSections && (
+                                    <div className="sections-dropdown">
+                                        <ul>
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('started')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Get Started</span>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('needs')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Things you need to do</span>
+                                                </Link>                                                
+                                            </li> 
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('deals')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Exclusive deals & discounts</span>
+                                                </Link>                                                                                           
+                                            </li> 
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('vacation')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Best vacation plan</span>
+                                                </Link>  
+                                                                                           
+                                            </li> 
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('reviews')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">What people say about us</span>
+                                                </Link>  
+                                                                                         
+                                            </li> 
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('blog')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Blog</span>
+                                                </Link>  
+                                                                                           
+                                            </li>    
+                                            <li>
+                                                <Link to="/" onClick={() => handleClick('subscribe')} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <span className="mx-3 fs-5 nav-link font-weight-bold">Subscribe</span>
+                                                </Link>  
+                                                                             
+                                            </li>                                          
+                                        </ul>
+                                    </div>
+                                )}
                             </li>
                             <li>
                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link3}</a>
                             </li>
                             <li>
-                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link4}</a>
+                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
+                                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} >{props.link4}</Link>
+                                </a>
                             </li>
                             <li>
                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
@@ -40,10 +98,10 @@ export default function Navbar({ props }) {
                                 <div className="btn-group" role="group">
                                     <div className="btn-group" role="group">
                                         <button id="btn-login" className="btn btn-lg rounded-3 me-2">
-                                            <Link   Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_1}</Link>
+                                            <Link    to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_1}</Link>
                                         </button>                                        
                                         <button id="btn-signup" className="btn btn-lg rounded-3">
-                                            <Link   Link to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_2}</Link>
+                                            <Link   to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_2}</Link>
                                         </button>
                                     </div>
                                 </div>
