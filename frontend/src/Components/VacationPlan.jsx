@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../styles/VacationPlan.css'
 
+/*
 const formatRates = (rates) => {
     // Convierte las tasas a un formato más legible
     if (rates >= 1000) {
@@ -10,7 +11,7 @@ const formatRates = (rates) => {
         return rates.toFixed(2);
     }
 };
-
+*/
 class Vacations extends React.Component {
     constructor(props) {
         super(props);

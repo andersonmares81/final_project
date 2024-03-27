@@ -47,7 +47,7 @@ class Blogs extends React.Component {
                                     <div className="card-wrapper container-sm d-flex">
                                         {group.map(card => (
                                             <div key={card.id} className="card discounts-carousel-card card-exclusive">
-                                                <img src={`../images/blogs/${card.images}`} className="img-blog rounded img-fluid" alt="Blog picture" />
+                                                <img src={`../images/blogs/${card.image}`} className="img-blog rounded img-fluid" alt="Blog picture" />
                                                 <div className="row">
                                                     <div className="col-md-12 ms-2 me-4 mt-2 fw-bold">
                                                         <p className="card-text title-blog my-1" dangerouslySetInnerHTML={{ __html: card.title }}></p>
