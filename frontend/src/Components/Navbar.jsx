@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 
 export default function Navbar({ props }) { 
+    const [showSections, setShowSections] = useState(false);
+
+    const toggleSections = () => {
+        setShowSections(!showSections);
+    }
+
     return (
         <div id="navbar">
             <nav className="navbar navbar-expand-lg">
@@ -20,8 +26,35 @@ export default function Navbar({ props }) {
                             <li>                                
                                 <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to = "/">{props.link1}</Link>
                             </li>
-                            <li>
-                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link2}</a>
+                            <li onMouseEnter={toggleSections} onMouseLeave={toggleSections}>
+                                <span className="mx-3 fs-5 nav-link font-weight-bold text-dark">Sections</span>
+                                {showSections && (
+                                    <div className="sections-dropdown">
+                                        <ul>
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold " href="#get-started">Get Started</a>
+                                            </li>
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#needs">Things you need to do</a>
+                                            </li> 
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#deals">Exclusive deals & discounts</a>
+                                            </li> 
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#vacation">Best vacation plan</a>
+                                            </li> 
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#reviews">What people say about us</a>
+                                            </li> 
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#blog">Blog</a>
+                                            </li>    
+                                            <li>
+                                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#subscribe">Subscribe</a>
+                                            </li>                                          
+                                        </ul>
+                                    </div>
+                                )}
                             </li>
                             <li>
                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link3}</a>
