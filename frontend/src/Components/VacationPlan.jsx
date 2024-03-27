@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../styles/VacationPlan.css'
 
 const formatRates = (rates) => {
     // Convierte las tasas a un formato más legible
@@ -61,22 +62,22 @@ class Vacations extends React.Component {
                             </div>
                             <div className="carousel-inner">
                                 {this.state.data.length > 0 && this.state.data.reduce((groups, item, index) => {
-                                    if (index % 4 === 0) {
+                                    if (index % 3 === 0) {
                                         groups.push([]);
                                     }
-                                    const groupIndex = Math.floor(index / 4);
+                                    const groupIndex = Math.floor(index / 3);
                                     groups[groupIndex].push(item);
                                     return groups;
                                 }, []).map((group, groupIndex) => (
                                     <div key={groupIndex} className={`carousel-item ${groupIndex === 0 ? 'active' : ''}`}>
                                         <div className="card-wrapper container-sm d-flex justify-content-around">
                                             {group.map(item => (
-                                                <div key={item.id} className="card discounts-carousel-card card-exclusive m-3">
-                                                    <img src={`../images/cities/${item.images}`} className="card-img-top img-vacations rounded carousel-img" alt={item.city} />
+                                                <div key={item.id} className="card discounts-carousel-card card-exclusive">
+                                                    <img src={`../images/vacation/${item.image}`} className="card-img-top img-vacations rounded carousel-img vacation-img" alt={item.city} />
                                                     <div className="card-body">
                                                         <div className="d-flex flex-column flex-sm-row justify-content-between">
-                                                            <h5 className="card-title">{item.city}, {item.country}</h5>
-                                                            <h5 className="card-title plan-price">${formatRates(item.rates)}</h5>
+                                                            <h5 className="card-title">{item.location}</h5>
+                                                            <h5 className="card-title plan-price">${item.price}</h5>
                                                         </div>
                                                         <div className="row">
                                                             <div className="col-md-6">
@@ -89,7 +90,7 @@ class Vacations extends React.Component {
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mt-1 svg-star bi bi-star-fill" viewBox="0 0 16 16">
                                                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                                                 </svg>
-                                                                <span className="ms-1">{item.qualification}</span>
+                                                                <span className="ms-1">{item.rate}</span>
                                                             </div>
                                                         </div>
                                                     </div>
