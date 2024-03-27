@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import useScrollTo from '../hooks/useScrollTo';
 
 
-export default function Navbar({ props }) { 
+export default function Navbar() {
     const [showSections, setShowSections] = useState(false);
     const { handleScrollTo } = useScrollTo();
 
@@ -28,10 +28,10 @@ export default function Navbar({ props }) {
                     <div class="navbar-collapse collapse" id="myNavbar">
                         <ul className="d-flex flex-row list-unstyled align-items-center justify-content-center">
                             <li className="logo-nav">
-                                <img className="nav-img" src={require(`../images/icons/${props.image}`)} alt="Logo-icon" />
+                                <img className="nav-img" src={`../images/icons/Logo-icon.png`} alt="Logo-icon" />
                             </li>
-                            <li>                                
-                                <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to = "/">{props.link1}</Link>
+                            <li>
+                                <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to="/">Home</Link>
                             </li>
                             <li onMouseEnter={toggleSections} onMouseLeave={toggleSections}>
                                 <span className="mx-3 fs-5 nav-link font-weight-bold text-dark">Sections</span>
@@ -46,62 +46,62 @@ export default function Navbar({ props }) {
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('needs')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">Things you need to do</span>
-                                                </Link>                                                
-                                            </li> 
+                                                </Link>
+                                            </li>
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('deals')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">Exclusive deals & discounts</span>
-                                                </Link>                                                                                           
-                                            </li> 
+                                                </Link>
+                                            </li>
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('vacation')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">Best vacation plan</span>
-                                                </Link>  
-                                                                                           
-                                            </li> 
+                                                </Link>
+
+                                            </li>
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('reviews')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">What people say about us</span>
-                                                </Link>  
-                                                                                         
-                                            </li> 
+                                                </Link>
+
+                                            </li>
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('blog')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">Blog</span>
-                                                </Link>  
-                                                                                           
-                                            </li>    
+                                                </Link>
+
+                                            </li>
                                             <li>
                                                 <Link to="/" onClick={() => handleClick('subscribe')} style={{ textDecoration: 'none', color: 'inherit' }}>
                                                     <span className="mx-3 fs-5 nav-link font-weight-bold">Subscribe</span>
-                                                </Link>  
-                                                                             
-                                            </li>                                          
+                                                </Link>
+
+                                            </li>
                                         </ul>
                                     </div>
                                 )}
                             </li>
                             <li>
-                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{props.link3}</a>
+                                <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">About</a>
                             </li>
                             <li>
                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
-                                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} >{props.link4}</Link>
+                                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} >Subscribe</Link>
                                 </a>
                             </li>
                             <li>
                                 <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
-                                    <Link   Link to="/extended-blog" style={{ textDecoration: 'none', color: 'inherit' }}>{props.link5}</Link>
+                                    <Link Link to="/extended-blog" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
                                 </a>
                             </li>
                             <li className="signing">
                                 <div className="btn-group" role="group">
                                     <div className="btn-group" role="group">
                                         <button id="btn-login" className="btn btn-lg rounded-3 me-2">
-                                            <Link    to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_1}</Link>
-                                        </button>                                        
+                                            <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>Login</Link>
+                                        </button>
                                         <button id="btn-signup" className="btn btn-lg rounded-3">
-                                            <Link   to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{props.btn_txt_2}</Link>
+                                            <Link to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>Sign up</Link>
                                         </button>
                                     </div>
                                 </div>
@@ -113,108 +113,3 @@ export default function Navbar({ props }) {
         </div>
     )
 }
-/*
-class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: []
-        };
-    }
-    componentDidMount() {
-        this.fetchData();
-    }
-
-    fetchData = () => {
-        axios.get('http://localhost:4001/api/navbar')
-            .then(response => {
-                this.setState({ data: response.data });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    };
-
-    render() {
-        return (
-            <div id="navbar">
-                <nav className="navbar navbar-expand-lg">
-                    <div className="container">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-                            aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="navbar-collapse collapse" id="myNavbar">
-                            <ul className="d-flex flex-row list-unstyled align-items-center justify-content-center">
-                                <li className="logo-nav">
-                                    <img className="nav-img" src={require(`../images/icons/${data.image}`)} alt="Logo-icon" />
-                                </li>
-                                <li>
-                                    <Link className="mx-3 fs-5 nav-link font-weight-bold text-dark" to="/">{data.link1}</Link>
-                                </li>
-                                <li onMouseEnter={toggleSections} onMouseLeave={toggleSections}>
-                                    <span className="mx-3 fs-5 nav-link font-weight-bold text-dark">Sections</span>
-                                    {showSections && (
-                                        <div className="sections-dropdown">
-                                            <ul>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold " href="#started">Get Started</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#needs">Things you need to do</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#deals">Exclusive deals & discounts</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#vacation">Best vacation plan</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#reviews">What people say about us</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#blog">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#subscribe">Subscribe</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    )}
-                                </li>
-                                <li>
-                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{data.link3}</a>
-                                </li>
-                                <li>
-                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">{data.link4}</a>
-                                </li>
-                                <li>
-                                    <a className="mx-3 fs-5 nav-link font-weight-bold text-dark" href="#">
-                                        <Link Link to="/extended-blog" style={{ textDecoration: 'none', color: 'inherit' }}>{data.link5}</Link>
-                                    </a>
-                                </li>
-                                <li className="signing">
-                                    <div className="btn-group" role="group">
-                                        <div className="btn-group" role="group">
-                                            <div className="btn-group" role="group">
-                                                <button id="btn-login" className="btn btn-lg rounded-3 me-2">
-                                                    <Link Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_1}</Link>
-                                                </button>
-                                                <button id="btn-signup" className="btn btn-lg rounded-3">
-                                                    <Link Link to="/register" style={{ textDecoration: 'none', color: 'inherit' }}>{data.btn_txt_2}</Link>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        )
-    }
-}
-
-export default Navbar;
-*/

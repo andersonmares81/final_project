@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './Components/Navbar.jsx';
-import NavbarProps from './Props/NavbarProps.js';
 import Footer from './Components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
@@ -23,8 +22,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-      <Navbar
-        props = {NavbarProps}/>
+      <Navbar/>
         <ScrollToTopOnPageChange/>
         <Routes>
           <Route path="/" element={<Home/>}/>
