@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/Deals.css'
 
 class Deals extends React.Component {
     constructor(props) {
@@ -46,7 +48,7 @@ class Deals extends React.Component {
                                         <div className="card-wrapper container-sm d-flex justify-content-around">
                                             {group.map(item => (
                                                 <div key={item.id} className="card discounts-carousel-card card-exclusive m-3">
-                                                    <img src={require(`../images/deals/${item.image}`)} className="card-img-top img-deals rounded carousel-img" alt={item.title} />
+                                                    <img src={`../images/deals/${item.images}`} className="card-img-top img-deals rounded carousel-img" alt={item.title} />
                                                     <div className="card-deals-body mb-1">
                                                         <div className="row my-2 pe-1">
                                                             <div className="col-md-6">

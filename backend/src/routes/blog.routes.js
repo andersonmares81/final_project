@@ -1,8 +1,8 @@
- import { Router } from "express";
- import { methods as blogController } from "../controllers/blog.controller.js";
+import { Router } from "express";
+import { methods as blogController } from "../controllers/blog.controller.js";
 
- const router = Router();
+const router = Router();
 
- router.get("/", blogController.getBlogs);
+router.get("/", blogController.getBlogs);
 
- export default router;
+export default router;
