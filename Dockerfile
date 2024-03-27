@@ -42,13 +42,13 @@ COPY frontend/package*.json ./
 RUN npm install
 
 # Copia el archivo de salida final del frontend
-COPY frontend/build/app.js .
+COPY frontend/src/App.js .
 
 # Usa una imagen base de Nginx para el servidor web
 FROM nginx:latest
 
 # Copia el archivo JavaScript del frontend en el servidor Nginx
-COPY --from=frontend /app/frontend/app.js /usr/share/nginx/html
+COPY --from=frontend /app/frontend/App.js /usr/share/nginx/html
 
 # Copia la configuración personalizada de Nginx
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
