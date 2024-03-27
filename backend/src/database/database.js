@@ -6,7 +6,9 @@ const pool = mysql.createPool({
     user: config.user,
     password: config.password, // Ensure this has a value
     database: config.database,
-    port: config.port
+    port: config.port,
+    connectTimeout: 10000,
+    reconnect: true
 });
 
 export const getConnection = async () => {
