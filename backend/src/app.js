@@ -12,6 +12,7 @@ import needsRoutes from "./routes/needs.routes.js"
 import locationsRoutes from "./routes/locations.routes.js"
 import footerRoutes from "./routes/footer.routes.js"
 import reviewsRoutes from "./routes/reviews.routes.js"
+import extendedBlogRoutes from "./routes/extendedblog.routes.js"
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use('/api/needs/', needsRoutes)
 app.use('/api/locations/', locationsRoutes)
 app.use('/api/footer/', footerRoutes)
 app.use('/api/reviews/', reviewsRoutes)
+app.use('/api/extendedblog/', extendedBlogRoutes)
 
 /*
 app.get('/api/destinations', (req, res) => {
