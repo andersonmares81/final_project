@@ -35,7 +35,7 @@ class Needs extends React.Component {
                             <p className="subtitle text-muted pt-3 subtitle">We ensure that you´ll embark on a perfectly planned,<br /> safe vacation at a price you can afford.</p>
                         </div>
                         <div className="icon-needs col-md-2">
-                            <img src={require(`../images/icons/Things-icon.png`)} alt="icon" className="image-left" />
+                            <img src={`../images/icons/Things-icon.png`} alt="icon" className="image-left" />
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ class Needs extends React.Component {
                                             <div className="card-wrapper container-sm d-flex card-needs">
                                                 {group.map(item => (
                                                     <div key={item.id} className={`card discounts-carousel-card card-exclusive m-3 ${groupIndex === 0 ? 'card-1' : 'card-2'}`}>
-                                                        <img src={require(`../images/icons/${item.image}`)} className="card-icon-top mt-4 ms-4" alt="Sign-up-icon" style={{ maxWidth: '100%', height: 'auto' }} />
+                                                        <img src={`../images/icons/${item.image}`} className="card-icon-top mt-4 ms-4" alt="Sign-up-icon" style={{ maxWidth: '100%', height: 'auto' }} />
                                                         <div className="card-body mb-1 ms-1">
                                                             <h4 className="card-title-needs font-weight-bold mt-4 ms-2">{item.title}</h4>
                                                             <p className="card-text-needs text-muted ms-2 mt-1" dangerouslySetInnerHTML={{ __html: item.description }}></p>

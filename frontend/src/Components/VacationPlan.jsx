@@ -44,7 +44,7 @@ class Vacations extends React.Component {
                             <p className="vacation-subtitle subtitle text-muted pt-4">Plan your perfect vacation with our travel agency. Choose<br /> among hundreds of all-inclusive offers!</p>
                         </div>
                         <div className="col-md-2 d-flex justify-content-start palm-icon">
-                            <img src={require(`../images/icons/palm-icon.png`)} alt="icon" className="image-left" />
+                            <img src={`../images/icons/palm-icon.png`} alt="icon" className="image-left" />
                         </div>
                     </div>
                     <div className="container vacation-cards d-flex justify-content-center">

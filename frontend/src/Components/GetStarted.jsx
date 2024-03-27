@@ -61,7 +61,7 @@ export default function GetStarted({ props }) {
                 <div className="container col-xxl-8">
                     <div className="row flex-lg-row-reverse align-items-center">
                         <div className="col-10 col-sm-8 col-lg-6">
-                            <img src={require(`../images/img/${props.image}`)} className="traveler-img d-block mx-lg-auto img-fluid" loading="lazy" alt="Traveler" />
+                            <img src={`../images/general/Traveler.png`} className="traveler-img d-block mx-lg-auto img-fluid" loading="lazy" alt="Traveler" />
                         </div>
                         <div className="col-lg-6">
                             <h1 className="display-5 fw-bold lh-1 mb-4 text-start" id="title">Get your exciting <span className="orange-color">journey</span> started with us.</h1>

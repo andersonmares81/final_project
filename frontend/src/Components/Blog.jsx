@@ -17,7 +17,7 @@ class Blogs extends React.Component {
     }
 
     fetchData = () => {
-        axios.get('http://localhost:4001/api/blogs')
+        axios.get('http://localhost:4001/api/blogz')
             .then(response => {
                 this.setState({ data: response.data }); console.log(vers, ' - LN 21 - response.data: ', response.data);
             })
