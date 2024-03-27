@@ -57,13 +57,12 @@ CREATE TABLE `locations` (
 --
 -- Dumping data for table `locations`
 --
-LOCK TABLES `locations` WRITE;
 
 /*!40000 ALTER TABLE `locations` DISABLE KEYS */
 ;
 
 INSERT INTO
-    `blogs`
+    `locations`
 VALUES
     (
         1,

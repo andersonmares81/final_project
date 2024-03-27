@@ -8,6 +8,10 @@ import blogRoutes from "./routes/blog.routes.js"
 import vacationRoutes from "./routes/vacation.routes.js"
 import dealsRoutes from "./routes/deals.routes.js"
 import navbarRoutes from "./routes/navbar.routes.js"
+import needsRoutes from "./routes/needs.routes.js"
+import locationsRoutes from "./routes/locations.routes.js"
+import footerRoutes from "./routes/footer.routes.js"
+import reviewsRoutes from "./routes/reviews.routes.js"
 
 const app = express();
 
@@ -28,6 +32,10 @@ app.use('/api/blogs/', blogRoutes);
 app.use('/api/vacations/', vacationRoutes);
 app.use('/api/deals/', dealsRoutes);
 app.use('/api/navbar/', navbarRoutes)
+app.use('/api/needs/', needsRoutes)
+app.use('/api/locations/', locationsRoutes)
+app.use('/api/footer/', footerRoutes)
+app.use('/api/reviews/', reviewsRoutes)
 
 /*
 app.get('/api/destinations', (req, res) => {
