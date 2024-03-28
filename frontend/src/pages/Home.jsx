@@ -1,6 +1,5 @@
 import React from 'react';
 import GetStarted from '../Components/GetStarted.jsx';
-import GetStartedProps from '../Props/GetStartedProps.js'
 import Needs from '../Components/Needs.jsx';
 import Deals from '../Components/Deals.jsx';
 import Vacation from '../Components/VacationPlan.jsx';
@@ -13,8 +12,7 @@ export default function Home() {
         <div >       
             
             <div id="started">
-                <GetStarted 
-                        props = {GetStartedProps}/>
+                <GetStarted />
             </div>   
             <div id="needs">
                 <Needs/>
